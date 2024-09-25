@@ -87,9 +87,9 @@
             android:layout_marginTop="60dp"
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="140dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:cardCornerRadius="8dp"
             app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_max="300dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,42 +115,6 @@
                     app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
-                        android:id="@+id/op50ml"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:background="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/op100ml"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                    <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_water_glass" />
-
-                    <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:text="50 ml"
-                            android:textColor="@color/colorBlack" />
-                </LinearLayout>
-
-                <View
-                        style="@style/DividerVertical"
-                        app:layout_constraintStart_toEndOf="@id/op50ml"
-                        app:layout_constraintTop_toBottomOf="parent" />
-
-                <View
-                        style="@style/DividerVertical"
-                        app:layout_constraintStart_toEndOf="@id/op100ml"
-                        app:layout_constraintTop_toBottomOf="parent" />
-
-                <LinearLayout
                         android:id="@+id/op100ml"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
@@ -159,14 +123,15 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/op150ml"
-                        app:layout_constraintStart_toEndOf="@+id/op50ml"
+                        app:layout_constraintEnd_toStartOf="@+id/op200ml"
+                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_coffee_cup" />
+                            android:importantForAccessibility="no"
+                            android:src="@drawable/ic_coffee_cup" />
 
                     <TextView
                             android:layout_width="wrap_content"
@@ -174,11 +139,48 @@
                             android:layout_marginTop="8dp"
                             android:text="100 ml"
                             android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+                <View
+                        style="@style/DividerVertical"
+                        app:layout_constraintStart_toEndOf="@id/op100ml"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                <View
+                        style="@style/DividerVertical"
+                        app:layout_constraintStart_toEndOf="@id/op200ml"
+                        app:layout_constraintTop_toBottomOf="parent" />
+
+                <LinearLayout
+                        android:id="@+id/op200ml"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/op330ml"
+                        app:layout_constraintStart_toEndOf="@+id/op100ml"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:importantForAccessibility="no"
+                            app:srcCompat="@drawable/ic_tea" />
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="200 ml"
+                            android:textColor="@color/colorBlack" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                        android:id="@+id/op150ml"
+                        android:id="@+id/op330ml"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:background="?attr/selectableItemBackground"
@@ -187,19 +189,20 @@
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/op100ml"
+                        app:layout_constraintStart_toEndOf="@+id/op200ml"
                         app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_tea" />
+                            android:importantForAccessibility="no"
+                            app:srcCompat="@drawable/ic_cola" />
 
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="150 ml"
+                            android:text="330 ml"
                             android:textColor="@color/colorBlack" />
 
                 </LinearLayout>
@@ -217,16 +220,16 @@
 
                 <View
                         style="@style/DividerVertical"
-                        app:layout_constraintStart_toEndOf="@id/op200ml"
+                        app:layout_constraintStart_toEndOf="@id/op500ml"
                         app:layout_constraintTop_toBottomOf="parent" />
 
                 <View
                         style="@style/DividerVertical"
-                        app:layout_constraintStart_toEndOf="@id/op250ml"
+                        app:layout_constraintStart_toEndOf="@id/op600ml"
                         app:layout_constraintTop_toBottomOf="parent" />
 
                 <LinearLayout
-                        android:id="@+id/op200ml"
+                        android:id="@+id/op500ml"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:background="?attr/selectableItemBackground"
@@ -234,26 +237,27 @@
                         android:gravity="center"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/op250ml"
+                        app:layout_constraintEnd_toStartOf="@+id/op600ml"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            app:srcCompat="@drawable/ic_cola" />
+                            android:importantForAccessibility="no"
+                            app:srcCompat="@drawable/ic_water_glass" />
 
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="200 ml"
+                            android:text="500 ml"
                             android:textColor="@color/colorBlack" />
 
                 </LinearLayout>
 
                 <LinearLayout
-                        android:id="@+id/op250ml"
+                        android:id="@+id/op600ml"
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:background="?attr/selectableItemBackground"
@@ -262,19 +266,20 @@
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/opCustom"
-                        app:layout_constraintStart_toEndOf="@+id/op200ml"
+                        app:layout_constraintStart_toEndOf="@+id/op500ml"
                         app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:importantForAccessibility="no"
                             app:srcCompat="@drawable/ic_juice" />
 
                     <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
-                            android:text="250 ml"
+                            android:text="600 ml"
                             android:textColor="@color/colorBlack" />
 
                 </LinearLayout>
@@ -289,12 +294,13 @@
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/op250ml"
+                        app:layout_constraintStart_toEndOf="@+id/op600ml"
                         app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:importantForAccessibility="no"
                             app:srcCompat="@drawable/ic_milk" />
 
                     <TextView
